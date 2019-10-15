@@ -1,0 +1,85 @@
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: serif;
+    font-size: 16px;
+}
+
+.wraper {
+    max-width: 1110px;
+    background-color: grey;
+    margin: 0 auto;
+}
+
+.page-header {
+    outline: 5px solid brown;
+    margin-top: 40px;
+}
+
+.logo {
+    outline: 2px solid red;
+    text-decoration: none;
+    float: left;
+}
+
+
+.menu {
+    outline: 2px solid green;
+    list-style: none;
+    float: right;
+    margin: 0;
+
+}
+
+.menu li {
+    float: left;
+    background-color: gold;
+}
+
+.menu li a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.gallery {}
+
+.gallery-list {}
+
+.gallery-list-item {
+    width: 255px;
+    height: 322px;
+}
+
+.box-1 {}
+
+
+h2 {
+    text-align: center;   
+    margin-top: 105px;
+    margin-bottom: 81px;
+}
+
+h2::after {
+    display: block;
+    width: 164px;
+    height: 7px;
+    background-color: red;
+    margin: 0 auto;
+    content: "";
+    margin-top: 32px;
+}
+
