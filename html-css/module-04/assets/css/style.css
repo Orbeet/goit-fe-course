@@ -24,7 +24,7 @@ body {
     text-transform: uppercase;
     float: left;
     font-family: 'Roboto', sans-serif;
-    font-weight: light;
+    font-weight: 300;
     color: #555252;
     text-decoration: none;
     font-size: 30px;
@@ -48,19 +48,27 @@ body {
     color: black;  
 }
 
-.menu li a {
+.menu-list {
+    margin-right: 30px;
+}
+
+.menu-list:last-child {
+    margin-right: 0;
+}
+
+.menu-list-item {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     color: #0f0101;
     text-transform: uppercase;
-    margin-left: 30px;
 }
 
-.menu li a:hover,
-.menu li a:focus {
+.menu-list-item:hover,
+.menu-list-item:focus {
     color: #1abc9c;
 }
+
 
 .gallery-list-item {
     margin: 0;
@@ -122,11 +130,11 @@ body {
     clear: both;
 }
 
-.gallery-list-item li:hover section {
+.box:hover section {
     background-color: #1abc9c;
 }
 
-.gallery-list-item li:hover span {
+.box:hover span {
     background-color: #7fd9c7;
 }
 
@@ -155,18 +163,22 @@ h5 {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: semibold;
-    color: #555252;
+    color: #555252; 
+    padding: 0;
+    margin: 10px 0;
 }
 
 .blog p {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 14px;
+    color: #555252;
+    line-height: 26px;
+    margin-top: 25px;
 }
 
 .blog {
     width: 350px;
-    /* height: 500px; */
     float: left;
     margin-right: 30px; 
 }
@@ -195,8 +207,11 @@ button {
     font-weight: light;
     font-size: 14px;
     background-color: #4ec6ab;
-    border-radius: 6px;
+    border-radius: 5px;
     width: 160px;
     height: 50px;
     margin-top: 16px;
+    border: none;
 }
+
+
