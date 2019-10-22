@@ -72,7 +72,7 @@ body {
 }
 
 .main-slider {
-  background-image: url(/assets/image/main_bg.jpg);
+  background-image: url(../image/main_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -98,12 +98,12 @@ body {
 }
 .slider-ctrl-prev {
   left: 0;
-  background-image: url(/assets/image/prev.png);
+  background-image: url(../image/prev.png);
 }
 
 .slider-ctrl-next {
   right: 0;
-  background-image: url(/assets/image/next.png);
+  background-image: url(../image/next.png);
 }
 
 .slides {
@@ -258,7 +258,7 @@ body {
 .add-to-cart::before {
 	display: inline-block;
 	content: "";
-	background-image: url(/assets/image/basket.png);
+	background-image: url(../image/basket.png);
 	margin-right: 10px;
 	margin-top: -5px;
 	width: 28px;
@@ -292,15 +292,15 @@ body {
 }
 
 .icon-heart {
-	background-image: url(/assets/image/heart.png);
+	background-image: url(../image/heart.png);
 }
 
 .icon-arrows {
-	background-image: url(/assets/image/arrows.png);
+	background-image: url(../image/arrows.png);
 }
 
 .icon-clock {
-	background-image: url(/assets/image/clock.png);
+	background-image: url(../image/clock.png);
 }
 
 .overlay-icons button:hover {
