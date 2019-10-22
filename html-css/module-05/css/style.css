@@ -101,9 +101,17 @@ body {
   background-image: url(../image/prev.png);
 }
 
+.slider-ctrl-prev:hover {
+  background-color: #1abc9c;
+}
+
 .slider-ctrl-next {
   right: 0;
   background-image: url(../image/next.png);
+}
+
+.slider-ctrl-next:hover {
+  background-color: #1abc9c;
 }
 
 .slides {
@@ -124,7 +132,6 @@ body {
   line-height: 37px;
   font-size: 57px;
   width: 730px;
-  /* background-color: green; */
   top: 190px;
   left: 190px;
 }
@@ -202,7 +209,7 @@ body {
   clear: both;
 }
 
-.box:hover section {
+.box:hover .description {
   background-color: #1abc9c;
 }
 
@@ -220,91 +227,6 @@ body {
   width: 255px;
   height: 282px;
   z-index: 2;
-}
-
-.box-nav {
-	opacity: 0;
-}
-
-.box:hover .box-nav {
-	opacity: 1;
-}
-
-.overlay-basket {
-  position: absolute;
-  left: 45px;
-	top: 50%;
-  width: 166px;
-  height: 50px;
-	z-index: 3;
-	border: 1px solid white;
-	background-color: rgb(50, 50, 50);
-	margin: 0;
-	padding: 0;
-}
-
-.overlay-basket a {
-	padding: 15px 18px;
-}
-.add-to-cart {
-	display: inline-block;
-  font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  color: rgb(255, 255, 255);
-	text-transform: uppercase;
-  vertical-align: middle;
-}
-
-.add-to-cart::before {
-	display: inline-block;
-	content: "";
-	background-image: url(../image/basket.png);
-	margin-right: 10px;
-	margin-top: -5px;
-	width: 28px;
-	height: 27px;
-	vertical-align: middle;
-}
-
-.overlay-icons {
-	display: inline-block;
-	width: 166px;
-	height: 50px;
-	position: absolute;
-	top: 33%;
-	left: 45px;
-	z-index: 3;
-}
-
-.overlay-icons button {
-	width: 50px;
-	height: 50px;
-	border: 1px solid white;
-	margin-right: 4px;
-	background-repeat: no-repeat;
-	background-position: center;
-  background-color: rgba(255, 255, 255, 0);      	/* поставил тут прозрачный цвет блоку, а то по другому не  получалось */
-	padding: 0;
-}
-
-.overlay-icons button:last-child {
-	margin-right: 0;
-}
-
-.icon-heart {
-	background-image: url(../image/heart.png);
-}
-
-.icon-arrows {
-	background-image: url(../image/arrows.png);
-}
-
-.icon-clock {
-	background-image: url(../image/clock.png);
-}
-
-.overlay-icons button:hover {
-	background-color: #1abc9c;
 }
 
 h2 {
@@ -329,56 +251,39 @@ h2::after {
   margin-top: 32px;
 }
 
-footer {
-  height: 88px;
-  background-color: #323232;
-}
-
-.designer p {
-  text-align: center;
-  padding-top: 38px;
-  color: #c8c8c8;
-  margin: 0;
-  /* font-family: ??? ; */
-}
-
-.designer_name {
-  color: #3f9081;
-}
-
-
-/* Это я пробовал немного другим способом, но не получилось убрать background-color: #3f908,  при наведении подсвечивался весь блок этим цветом */
-
-/* .cart-nav {
+.cart-nav {
 	height: 110px;
 	width: 168px;
 	background-color: rgba(255, 255, 255, 0);
 	position: absolute;
-	top: 30%;
-	left: 50%;
-	margin: 0 auto;
-	padding: 0;
-	z-index: 2;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
 }
 
+.box:hover .cart-nav {
+  opacity: 1;
+}
 
 .cart-icons {
 	margin: 0;
 	padding: 0;
 }
+
 .cart-icons button {
 	display: inline-block;
 	height: 50px;
 	width: 50px;
 	list-style-type: none;
 	border: 1px solid white;
-	margin-bottom: 8px;
+	margin-bottom: 7px;
 	margin-right: 5px;
-
 }
 
 .cart-icons button:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .cart-icons button {
@@ -387,22 +292,22 @@ footer {
 	background-color: rgba(255, 255, 255, 0);
 }
 
+.cart-icons button:hover {
+  background-color: #1abc9c;
+}
+
 .heart {
-	background-image: url(/assets/image/heart.png);
+	background-image: url(../image/heart.png);
 }
 
 .arrows {
-	background-image: url(/assets/image/arrows.png);
+	background-image: url(../image/arrows.png);
 }
 
 .clock {
-	background-image: url(/assets/image/clock.png);
+	background-image: url(../image/clock.png);
 }
 
-.heart:hover {
-	background-color: #1abc9c;
-	background-color: green;
-}
 
 .cart-btn {
 	background-color: #323232;
@@ -423,17 +328,33 @@ footer {
 	padding-left: 10px;
 	padding-right: 20px;
 	text-decoration: none;
-	width: 168px;
+	width: 167px;
 	height: 50px;
 }
 
 .cart-btn a::before {
 	display: inline-block;
 	content: "";
-	background-image: url(/assets/image/basket.png);
+	background-image: url(../image/basket.png);
 	margin-right: 10px;
 	margin-top: -5px;
 	width: 28px;
 	height: 27px;
 	vertical-align: middle;
-} */
+}
+
+footer {
+  height: 88px;
+  background-color: #323232;
+}
+
+.designer p {
+  text-align: center;
+  padding-top: 38px;
+  color: #c8c8c8;
+  margin: 0;
+}
+
+.designer_name {
+  color: #3f9081;
+}
