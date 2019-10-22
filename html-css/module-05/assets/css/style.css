@@ -1,0 +1,439 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: serif;
+  font-size: 16px;
+}
+
+.wraper {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 18px;
+  margin-top: 20px;
+}
+
+.logo {
+  text-transform: uppercase;
+  float: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #555252;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.logo::first-letter {
+  color: #1abc9c;
+  font-family: "Roboto Black", sans-serif;
+  font-weight: bold;
+}
+
+.menu {
+  list-style: none;
+  float: right;
+}
+
+.menu li {
+  float: left;
+  font-size: 12px;
+  color: black;
+}
+
+.menu-list {
+  margin-right: 30px;
+}
+
+.menu-list:last-child {
+  margin-right: 0;
+}
+
+.menu-list-item {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #0f0101;
+  text-transform: uppercase;
+}
+
+.menu-list-item:hover,
+.menu-list-item:focus {
+  color: #1abc9c;
+}
+
+.main-slider {
+  background-image: url(/assets/image/main_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider {
+  width: 1110px;
+  height: 600px;
+  margin: auto;
+  position: relative;
+}
+
+.slider-ctrl {
+  background-color: rgba(78, 198, 171, 0.7);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 104px;
+  height: 104px;
+  z-index: 2;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.slider-ctrl-prev {
+  left: 0;
+  background-image: url(/assets/image/prev.png);
+}
+
+.slider-ctrl-next {
+  right: 0;
+  background-image: url(/assets/image/next.png);
+}
+
+.slides {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slides-item {
+  position: relative;
+}
+
+.slides-description {
+  position: absolute;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  line-height: 37px;
+  font-size: 57px;
+  width: 730px;
+  /* background-color: green; */
+  top: 190px;
+  left: 190px;
+}
+
+.slides-description-text {
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #e9e7e7;
+}
+
+.gallery {
+  padding-bottom: 98px;
+  background-color: #e9f0fd;
+}
+
+.gallery-list-item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery-list-item li {
+  width: 255px;
+  height: 322px;
+  text-decoration: none;
+  list-style-type: none;
+  float: left;
+}
+
+.gallery-list-item li:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+.gallery-list-item li:not(:nth-last-child(-n + 4)) {
+  margin-bottom: 30px;
+}
+
+.box {
+  width: 255px;
+  height: 322px;
+	float: left;
+	position: relative;
+}
+
+.description {
+  margin-top: -4px;
+  background-color: #323232;
+}
+
+.product {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: white;
+  float: left;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 12px;
+}
+
+.prise {
+  text-align: center;
+  padding: 12px;
+  background-color: #8c8c8c;
+  float: right;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  color: white;
+}
+
+.clearfix::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.box:hover section {
+  background-color: #1abc9c;
+}
+
+.box:hover span {
+  background-color: #7fd9c7;
+}
+
+.box:hover .overlay {
+  border: 10px solid white;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.55;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 255px;
+  height: 282px;
+  z-index: 2;
+}
+
+.box-nav {
+	opacity: 0;
+}
+
+.box:hover .box-nav {
+	opacity: 1;
+}
+
+.overlay-basket {
+  position: absolute;
+  left: 45px;
+	top: 50%;
+  width: 166px;
+  height: 50px;
+	z-index: 3;
+	border: 1px solid white;
+	background-color: rgb(50, 50, 50);
+	margin: 0;
+	padding: 0;
+}
+
+.overlay-basket a {
+	padding: 15px 18px;
+}
+.add-to-cart {
+	display: inline-block;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 255, 255);
+	text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.add-to-cart::before {
+	display: inline-block;
+	content: "";
+	background-image: url(/assets/image/basket.png);
+	margin-right: 10px;
+	margin-top: -5px;
+	width: 28px;
+	height: 27px;
+	vertical-align: middle;
+}
+
+.overlay-icons {
+	display: inline-block;
+	width: 166px;
+	height: 50px;
+	position: absolute;
+	top: 33%;
+	left: 45px;
+	z-index: 3;
+}
+
+.overlay-icons button {
+	width: 50px;
+	height: 50px;
+	border: 1px solid white;
+	margin-right: 4px;
+	background-repeat: no-repeat;
+	background-position: center;
+  background-color: rgba(255, 255, 255, 0);      	/* поставил тут прозрачный цвет блоку, а то по другому не  получалось */
+	padding: 0;
+}
+
+.overlay-icons button:last-child {
+	margin-right: 0;
+}
+
+.icon-heart {
+	background-image: url(/assets/image/heart.png);
+}
+
+.icon-arrows {
+	background-image: url(/assets/image/arrows.png);
+}
+
+.icon-clock {
+	background-image: url(/assets/image/clock.png);
+}
+
+.overlay-icons button:hover {
+	background-color: #1abc9c;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 81px;
+  font-size: 48px;
+  font-weight: black;
+  font-family: "Roboto", sans-serif;
+  color: #515151;
+  margin-top: 0;
+  padding-top: 82px;
+  text-transform: uppercase;
+}
+
+h2::after {
+  display: block;
+  width: 164px;
+  height: 7px;
+  background-color: #1abc9c;
+  margin: 0 auto;
+  content: "";
+  margin-top: 32px;
+}
+
+footer {
+  height: 88px;
+  background-color: #323232;
+}
+
+.designer p {
+  text-align: center;
+  padding-top: 38px;
+  color: #c8c8c8;
+  margin: 0;
+  /* font-family: ??? ; */
+}
+
+.designer_name {
+  color: #3f9081;
+}
+
+
+/* Это я пробовал немного другим способом, но не получилось убрать background-color: #3f908,  при наведении подсвечивался весь блок этим цветом */
+
+/* .cart-nav {
+	height: 110px;
+	width: 168px;
+	background-color: rgba(255, 255, 255, 0);
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin: 0 auto;
+	padding: 0;
+	z-index: 2;
+}
+
+
+.cart-icons {
+	margin: 0;
+	padding: 0;
+}
+.cart-icons button {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	list-style-type: none;
+	border: 1px solid white;
+	margin-bottom: 8px;
+	margin-right: 5px;
+
+}
+
+.cart-icons button:last-child {
+	margin-right: 0;
+}
+
+.cart-icons button {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.heart {
+	background-image: url(/assets/image/heart.png);
+}
+
+.arrows {
+	background-image: url(/assets/image/arrows.png);
+}
+
+.clock {
+	background-image: url(/assets/image/clock.png);
+}
+
+.heart:hover {
+	background-color: #1abc9c;
+	background-color: green;
+}
+
+.cart-btn {
+	background-color: #323232;
+	border: 1px solid white;
+	margin: 0;
+	padding: 0;
+}
+
+.cart-btn a {
+	display: inline-block;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+	padding-right: 20px;
+	text-decoration: none;
+	width: 168px;
+	height: 50px;
+}
+
+.cart-btn a::before {
+	display: inline-block;
+	content: "";
+	background-image: url(/assets/image/basket.png);
+	margin-right: 10px;
+	margin-top: -5px;
+	width: 28px;
+	height: 27px;
+	vertical-align: middle;
+} */
