@@ -19,7 +19,7 @@ body {
 }
 
 .page-header {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   margin-top: 20px;
 }
 
@@ -88,7 +88,7 @@ body {
 .slider-ctrl {
   background-color: rgba(78, 198, 171, 0.7);
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   width: 104px;
   height: 104px;
@@ -133,19 +133,20 @@ body {
 .slides-description {
   position: absolute;
   width: 730px;
-  top: 190px;
+  top: 210px;
   left: 200px;
   height: 100px;
+  margin: 0 auto;
+  padding: 0;
 }
 
  h3 {
+   display: inline;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 57px;
   line-height: 42px;
-  margin-bottom: 30px;
-  padding: 0;
 }
 
 .slides-description-text {
@@ -153,7 +154,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #e9e7e7;
-  margin: 0;
+  margin-top: 30px;
   padding: 0;
 }
 
