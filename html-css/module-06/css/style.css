@@ -1,0 +1,359 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --main-color: #95e1d3;
+  --primary-color: #f38181;
+}
+
+body {}
+
+.page-header {}
+
+.page-nav {
+  display: flex;
+  min-height: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.site-navigation {
+  display: flex;
+  width: 490px;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation a {
+  color: var(--main-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+.site-navigation a:hover, 
+.site-navigation a:focus {
+  color: var(--primary-color);
+}
+
+.site-navigation a::before {
+  content: '';
+  top: 20px;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: 0.2s linear;
+  transform: scaleX(0);
+}
+
+.site-navigation a:hover:before {
+  transform: scaleX(1);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* SERVICE SECTION */
+.section-title {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h2 {
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 30px;
+  color: #333333;
+  text-transform: uppercase;
+}
+
+h2::after {
+  display: block;
+  content: '';
+  width: 60px;
+  height: 3px;
+  margin: 40px auto;
+  background-color: var(--primary-color);
+}
+
+.service {
+  margin-top: 100px;
+}
+
+.service-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 75px;
+  padding: 0;
+}
+
+.service-list-item {
+  flex: 0 0 392px;
+  margin-bottom: 100px;
+}
+
+.service-list-item::before {
+  content: '';
+  display: block;
+  width: 92px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: top;
+  float: left;
+}
+
+.icon-clock::before {
+  background-image: url(../images/clock.png);
+}
+
+.icon-line_graph::before {
+  background-image: url(../images/line_graph.png);
+}
+
+.icon-computer::before {
+  background-image: url(../images/computer.png);
+}
+
+.icon-book::before {
+  background-image: url(../images/book.png);
+}
+
+.icon-home::before {
+  background-image: url(../images/home.png);
+}
+
+.icon-image::before {
+  background-image: url(../images/IMAGE.png);
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.service-list-item-text {
+  margin-top: 20px;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #999999;
+}
+
+
+/* OUR TEAM SECTION */
+.our-team-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #999999;
+  text-align: center;
+  width: 980px;
+  margin: 0 auto 92px;
+  padding: 0;
+}
+
+.users-list {
+  display: flex;
+}
+
+.user-card {
+  flex-grow: 1;
+  margin-right: 30px;
+}
+
+.user-card:last-child {
+  margin-right: 0;
+}
+
+.user-card:hover .user-menu-wrapper {
+  transition: opacity 200ms linear;
+  opacity: 1;
+  visibility: visible;
+}
+
+.user-card:hover .user-photo-wrapper {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 0 var(--main-color);
+}
+
+.user-photo-wrapper {
+  height: 470px;
+  position: relative;
+  margin-bottom: 30px;
+  transition: all 200ms linear;
+}
+
+.user-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #333333;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.user-position {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #999999;
+  font-size: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.user-menu-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity 200ms, visibility 0ms ease 200ms linear;
+  background-image: linear-gradient(0deg, rgba(252,227,138, 0.9) 0%, rgba(243,129,129, 0.9) 100%);
+}
+
+.user-menu {
+  display: flex;
+  position: relative;
+  opacity: 1;
+}
+
+.user-menu-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #fce38a;
+  transition: all 200ms linear;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 1px;
+}
+
+.user-menu-icon-facebook {
+  background-image: url(../images/facebook.png);
+}
+
+.user-menu-icon-twitter {
+  background-image: url(../images/twitter.png);
+}
+
+.user-menu-icon-pinterest {
+  background-image: url(../images/pinterest.png);
+}
+
+.user-menu-icon-instagram {
+  background-image: url(../images/instagram.png);
+}
+
+.user-menu-icon:last-child {
+  margin-right: 0;
+}
+.user-menu-icon:hover {
+  background-color: var(--main-color);
+}
+
+.footer {
+  height: 63px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  margin-top: 82px;
+  background-color: #e5e5e5;
+}
+
+.designer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 10px auto;
+}
+
+.designer-text {
+  color: #333333;
+}
+
+.designer-name {
+color: var(--primary-color);
+text-decoration: none;
+}
+
+.form {
+  height: 40px;
+  display: flex;
+}
+.email {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #999999;
+  font-size: 15px;
+  font-style: italic;
+  padding: 11px;
+  width: 230px;
+}
+
+.form-btn {
+  padding: 14px 33px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: none;
+  background-color: var(--main-color);
+  color: #fff;
+  transition: 0.3s linear;
+}
+
+.form-btn:hover {
+  background-color: var(--primary-color);
+}
