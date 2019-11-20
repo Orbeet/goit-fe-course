@@ -1,0 +1,116 @@
+@media (min-width: 320px) and (max-width: 767px) {
+    .page-nav {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 10px 0 20px;
+      align-items: center;
+    }
+  
+    .site-logo {
+      padding-top: 65px;
+    }
+  
+    .header-text {
+      width: 220px;
+    }
+  
+    .card-wrapper {
+      display: flex;
+      flex-flow: wrap;
+    }
+  
+    .card-1 {
+      order: 1;
+    }
+  
+    .card-2 {
+      order: 3;
+    }
+  
+    .card-3 {
+      order: 2;
+    }
+    .card-4 {
+      order: 4;
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .page-header {
+      min-height: 700px;
+      background-image: url(../images/bg_tablet.png);
+      padding-top: 17px;
+    }
+  
+    .container {
+      width: 660px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    h1 {
+      width: 505px;
+      /* width: 76.5151515%; */
+      font-size: 52px;
+      margin: 112px auto 15px;
+    }
+  
+    .header-text {
+      padding: 15px 0 40px;
+      font-size: 24px;
+    }
+  
+    .header-btn {
+      padding: 12px 21px;
+    }
+  
+    .partners-btn {
+      padding: 12px 65px;
+    }
+  
+    .partner {
+      /* width: 492px; */
+      /* width: 74.5454545%; */
+      width: 560px;
+    }
+  
+    h2 {
+      padding-bottom: 36px;
+    }
+  
+    .project-card {
+      width: 280px;
+    }
+  }
+  
+  @media (min-width: 1020px) and (max-width: 1239px) {
+    .page-header {
+      background-image: url(../images/bg_dt.png);
+    }
+  
+    .container {
+      max-width: 940px;
+    }
+  
+    .project-card {
+      width: 220px;
+      /* width: 23.4042553%; */
+    }
+  }
+  
+  @media screen and (min-width: 1240px) {
+    .container {
+      min-width: 940px;
+    }
+  
+    .partner {
+      width: 940px;
+    }
+  
+    .project-card {
+      width: 220px;
+    }
+  }
+  
