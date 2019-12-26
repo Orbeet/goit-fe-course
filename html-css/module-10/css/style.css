@@ -22,13 +22,10 @@ body {
 }
 
 .header {
-}
-
-.bunner__img {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 1000px;
+  background-image: url(/images/bunner.png);
+  min-height: 1000px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header__nav {
