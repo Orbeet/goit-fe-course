@@ -1,0 +1,55 @@
+.service-list {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 75px;
+  padding: 0;
+
+  &__item {
+    flex: 0 0 392px;
+    margin-bottom: 100px;
+  }
+    
+  &__item::before {
+    content: "";
+    display: block;
+    width: 92px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: top;
+    float: left;
+  }
+    
+  &__icon-clock::before {
+    background-image: url(../images/clock.png);
+  }
+    
+  &__icon-line_graph::before {
+    background-image: url(../images/LINE_GRAPH.png);
+  }
+    
+  &__icon-computer::before {
+    background-image: url(../images/computer.png);
+  }
+    
+  &__icon-book::before {
+    background-image: url(../images/BOOK.png);
+  }
+    
+  &__icon-home::before {
+    background-image: url(../images/HOME.png);
+  }
+    
+  &__icon-image::before {
+    background-image: url(../images/IMAGE.png);
+  }
+
+  &__text {
+    margin-top: 20px;
+    padding: 0;
+    font-family: $other-font-stack;
+    font-size: 14px;
+    color: $text-color;
+  }
+}
